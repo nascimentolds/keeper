@@ -1,11 +1,11 @@
-export default function Note() {
+export default function Note(props) {
   return (
     <div className="note">
       <div className="note--header">
-        <h3>Title</h3>
+        <h3>{props.title}</h3>
       </div>
       <div className="note--content">
-        <p>Contente</p>
+        <p>{props.content}</p>
       </div>
     </div>
   )
