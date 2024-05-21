@@ -26,7 +26,7 @@ const notes = [
   {
     key: 5,
     title: "Big ideas",
-    content: "Eat more sushi"
+    content: "Eat more sushi beacause it is so delicious. I need to do that two times a week"
   }
 ];
 
