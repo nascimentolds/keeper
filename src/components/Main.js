@@ -15,15 +15,29 @@ export default function Main() {
 
   function addNote(note) {
     setNotes(prevNotes => (
-      {
+      [
         ...prevNotes,
         note
-      }
+      ]
     ))
   }
 
+  function deleteNote(id) {
+    setNotes(
+       notes.filter(item => {
+        return item.id !== id
+      })
+    )
+  }
+
   const allNotes = notes.map(item => (
-    <Note key={item.id} title={item.title} content={item.content} />
+    <Note 
+      key={item.id} 
+      title={item.title} 
+      content={item.content} 
+      onDelete={deleteNote}
+      id={item.id}
+    />
   ))
 
   return (

@@ -41,6 +41,13 @@ export default function AddNote(props) {
         onClick={
           () => {
             props.onAdd(note)
+            setNote(
+              {
+                id: null,
+                title: "",
+                content: ""
+              }
+            )
           }
         } 
         className="add--button"

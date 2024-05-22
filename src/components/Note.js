@@ -1,3 +1,5 @@
+import { MdDelete } from 'react-icons/md'
+
 export default function Note(props) {
   return (
     <div className="note">
@@ -7,6 +9,14 @@ export default function Note(props) {
       <div className="note--content">
         <p>{props.content}</p>
       </div>
+      <button 
+        className="note--remove" 
+        onClick={() => {
+          props.onDelete(props.id)
+        }}
+      >
+        <MdDelete />
+      </button>
     </div>
   )
 }
