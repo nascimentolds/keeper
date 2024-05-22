@@ -1,17 +1,11 @@
 import Note from "./Note";
-// import notes from "../notes";
+import data from "../notes";
 import AddNote from "./AddNote";
-import { nanoid } from 'nanoid';
+// import { nanoid } from 'nanoid';
 import { useState } from "react";
 
 export default function Main() {
-  const [notes, setNotes] = useState([
-    {
-      id: nanoid(),
-      title: "teste",
-      content: "Testando uma nova nota."
-    }
-  ])
+  const [notes, setNotes] = useState(data)
 
   function addNote(note) {
     setNotes(prevNotes => (

@@ -54,12 +54,25 @@ body {
 .add--input {
   display: flex;
   width: 100%;
-  padding: 10px;
+  /* padding: 5px; */
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   background-color: transparent;
   border: none;
   resize: none;
+}
+
+.add--input:focus {
+  outline: none;
+}
+
+.add--title {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.add--content {
+  font-size: 0.85rem;
 }
 
 .add--button {

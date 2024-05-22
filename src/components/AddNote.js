@@ -25,7 +25,7 @@ export default function AddNote(props) {
       <input
         onChange={handleChange}
         value={note.title}
-        className="add--input"
+        className="add--input add--title"
         type="text"
         name="title"
         placeholder="Title"
@@ -33,7 +33,7 @@ export default function AddNote(props) {
       <textarea
         onChange={handleChange}
         value={note.content}
-        className="add--input"
+        className="add--input add--content"
         name="content"
         placeholder="Take a note..."
       />
