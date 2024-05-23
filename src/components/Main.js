@@ -2,10 +2,17 @@ import Note from "./Note";
 import data from "../notes";
 import AddNote from "./AddNote";
 // import { nanoid } from 'nanoid';
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function Main() {
-  const [notes, setNotes] = useState(data)
+  const [notes, setNotes] = useState(() => {
+    const notesOnStorage = localStorage.getItem("notes")
+    return notesOnStorage ? JSON.parse(notesOnStorage) : []
+  })
+
+  useEffect(() => {
+    localStorage.setItem("notes", JSON.stringify(notes))
+  }, [notes])
 
   function addNote(note) {
     setNotes(prevNotes => (
