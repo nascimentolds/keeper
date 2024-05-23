@@ -1,7 +1,5 @@
 import Note from "./Note";
-import data from "../notes";
 import AddNote from "./AddNote";
-// import { nanoid } from 'nanoid';
 import { useEffect, useState } from "react";
 
 export default function Main() {

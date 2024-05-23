@@ -6,7 +6,7 @@
 
 body {
   font-family: "Roboto", sans-serif;
-  background: #eee;
+  background-color: #eee;
 }
 
 .container {
@@ -89,6 +89,10 @@ body {
   border-radius: 50px;
   font-size: 16px;
   cursor: pointer;
+}
+
+.add--button:hover {
+  background-color: #DCAD29;
 }
 
 .warning::placeholder {

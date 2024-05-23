@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+# Keeper Application
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A note-taking tool similar to Google Keep, developed in React.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+1. [Description](#description)
+2. [Screenshot](#screenshot)
+3. [Features](#features)
+4. [Links](#links)
+5. [Technologies Used](#technologies-used)
+6. [Libraries Used](#libraries-used)
+7. [Application Structure](#application-structure)
+8. [Application Flow](#application-flow)
 
-### `npm start`
+## Description
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The Keeper application is a note-taking tool that allows users to create, store, and delete notes, with data being saved in the browser's `localStorage` for persistence.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Screenshot
 
-### `npm test`
+![Screenshot of Keeper Application](./public/screenshot.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Features
 
-### `npm run build`
+- Create and save notes
+- Delete notes
+- Persist notes using `localStorage`
+- Responsive and user-friendly interface
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Links
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+- [Live Application](https://keeper-lilac-phi.vercel.app/)
+- [GitHub Repository](https://github.com/nascimentolds/keeper)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Technologies Used
 
-### `npm run eject`
+- **JavaScript (ES6+)**
+- **React**
+- **CSS**
+- **LocalStorage**
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Libraries Used
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. **React**: Library for building the interface.
+2. **React Icons**: Icons for the interface (`MdHighlight`, `MdDelete`, `MdAdd`).
+3. **Nanoid**: Generating unique IDs for notes.
+4. **@mui/material**: Interface animations (`Zoom`).
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Application Structure
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **App**: Main component that renders `Header`, `Main`, and `Footer`.
+- **Header**: Displays the application title with an icon.
+- **Main**: Manages the state of notes, renders `AddNote` and the list of `Note`.
+- **Note**: Shows a note with title, content, and a delete button.
+- **AddNote**: Form for adding notes, with expansion and warning if fields are empty.
+- **Footer**: Displays the current year in the footer.
 
-## Learn More
+## Application Flow
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+1. **Initialization**: Loads notes from `localStorage`.
+2. **Add Note**: User fills out the form and adds a note.
+3. **Persistence**: `useEffect` updates `localStorage` when notes change.
+4. **Delete Note**: User deletes a note by clicking the delete icon.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+---
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Feel free to contribute, open issues, or suggest improvements!
